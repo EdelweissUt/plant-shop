@@ -1,0 +1,68 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /plant
+
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3306/plant-shop?createDatabaseIfNotExist=true"
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    username: root
+    password: Thuhoa040902
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+      enabled: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 0409kyna@gmail.com
+    password: pqxk izko ifoa cdls # nên dùng App Password thay vì password thật nếu dùng Gmail
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+outbound:
+  identity:
+    client-id: "575055638105-hqkjc70acra7accjv2nmej921kb6r8pn.apps.googleusercontent.com"
+    client-secret: "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"
+    redirect-uri: "http://localhost:3000/authenticate"
+
+jwt:
+  signerKey: "1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij"
+  valid-duration: 3600 # in second
+  refreshable-duration: 36000 # in seconds
+
+cloudinary:
+  cloud-name: "dc0vfbssc"
+  api-key: "755641186534392"
+  api-secret: "lLXJICdO2o89GcCi3eR93yoIWjo"
+
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:8080
+    title: API Service
+    version: 1.0.0
+payos:
+  payos-client-id: "b8252fe6-5773-4c81-802b-7c53b3c3888f"
+  payos-api-key: "f338a611-8861-44c4-b6bb-b61fde550d96"
+  payos-checksum-key: "d66fe2531bedc64b28aafeb5423d982c5e70fd9a5d1cdfc89c1e9e18ec833738"
+google:
+  maps:
+    api-key: "AIzaSyBrhusTQ3FzEKWpnGgsFr_kaxFqIDpo-4g"
+  shop-address: "123 Cách Mạng Tháng Tám, Quận 1, TP.HCM"
+
+
+
