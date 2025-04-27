@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    background: #ffffff;
+    color: rgba(0,0,0,0.9);
+}
+.container{
+    width: 95%; margin: auto;
+}
+header .top-strip{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,1);
+}
+
+.link:hover{
+color: #ff5252;
+}
+.MuiBadge-badge{
+    background-color: #ff5252 !important;
+}
+nav ul button{
+    text-transform: capitalize !important;
+    color: rgba(0,0,0,0.7) !important;
+}
+.sliderHome{overflow: inherit !important;}
+
+.swiper-button-prev,.swiper-button-next{display: flex; align-items: center; justify-content: center; background:#fff; border-radius: 100%; width: 45px; height: 45px; min-width: 45px; box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;}
+.swiper-button-prev:after,.swiper-button-next:after{font-size: 22px !important; color: #000;}
+.MuiTabs-indicator{background-color: #ff5252 !important;}
+.MuiTab-textColorPrimary.Mui-selected{color: #ff5252 !important;}
+.productsSlider.swiper-wrapper{padding: 15px; margin-left: 15px; margin-right: -15px;}
+.swiper-pagination-bullet-active{background: #ff5252 ! important;}
